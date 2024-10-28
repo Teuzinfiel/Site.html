@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão do Otário</title>
+    <style>
+        body {
+            background-color: #00a9b5;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+        button {
+            font-size: 20px;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você vai dar para o Matheus hoje</h1>
+    <button onclick="moverBotao()">Não</button>
+    <button onclick="abrirMensagem()">Sim</button>
+    
+    <script>
+        function abrirMensagem() {
+            window.open('https://www.youtube.com/watch?v=juPwEJC3Z9Q', '_blank'); // Substitua 'EXEMPLO' pelo ID do vídeo
+            alert("O Matheus pegou você de jeito");
+        }
+
+        function moverBotao() {
+            // Função para mover o botão "Não" aleatoriamente
+            const button = document.querySelector('button:nth-of-type(1)');
+            button.style.position = 'absolute';
+            button.style.top = Math.random() * window.innerHeight + 'px';
+            button.style.left = Math.random() * window.innerWidth + 'px';
+        }
+    </script>
+</body>
+</html>
